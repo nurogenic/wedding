@@ -1,0 +1,19 @@
+@font-face {
+  font-family: 'Avenir';
+  src: url('Avenir/Avenir-Black.eot'); /* IE9 Compat Modes */
+  src: url('Avenir/Avenir-Black.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Avenir/Avenir-Black.woff') format('woff'), /* Pretty Modern Browsers */
+       url('Avenir/Avenir-Black.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Avenir/Avenir-Black.svg#Avenir-Black') format('svg'); /* Legacy iOS */
+    font-weight: bold;
+}
+
+@font-face {
+  font-family: 'Avenir';
+  src: url('Avenir/Avenir-Medium.eot'); /* IE9 Compat Modes */
+  src: url('Avenir/Avenir-Medium.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('Avenir/Avenir-Medium.woff') format('woff'), /* Pretty Modern Browsers */
+       url('Avenir/Avenir-Medium.ttf')  format('truetype'), /* Safari, Android, iOS */
+       url('Avenir/Avenir-Medium.svg#Avenir-Medium') format('svg'); /* Legacy iOS */
+    font-weight: normal;
+}

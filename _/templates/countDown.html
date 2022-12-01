@@ -1,0 +1,13 @@
+<div ng-if="canShow()" class="element-center table table-fixed">
+	<div class="tr">
+	<div class="element-inline td va-top" ng-if="getTimeObj().years">{{getTimeObj().years}} <br><small>Year{{(getTimeObj().years > 1) ? 's': ''}}</small></div>
+	<div class="va-top td" ng-if="getTimeObj().years && getTimeObj().days">:</div>
+	<div class="element-inline td va-top" ng-if="getTimeObj().days">{{getTimeObj().days}} <br><small>Day{{(getTimeObj().days > 1) ? 's': ''}}</small></div>
+	<div class="va-top td" ng-if="getTimeObj().days && getTimeObj().hours">:</div>
+	<div class="element-inline td va-top" ng-if="getTimeObj().hours">{{getTimeObj().hours}} <br><small>Hour{{(getTimeObj().hours > 1) ? 's': ''}}</small></div>
+	<div class="va-top td" ng-if="getTimeObj().hours && getTimeObj().minutes">:</div>
+	<div class="element-inline td va-top" ng-if="getTimeObj().minutes">{{getTimeObj().minutes}} <br><small>Minute{{(getTimeObj().minutes > 1) ? 's': ''}}</small></div>
+	<div class="va-top td" ng-if="getTimeObj().minutes && getTimeObj().seconds">:</div>
+	<div class="element-inline td va-top" ng-if="getTimeObj().seconds">{{getTimeObj().seconds}} <br><small>Second{{(getTimeObj().seconds > 1) ? 's': ''}}</small></div>
+	</div>
+</div>

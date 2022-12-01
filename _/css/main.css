@@ -1,0 +1,755 @@
+/*! HTML5 Boilerplate v4.3.0 | MIT License | http://h5bp.com/ */
+
+html,
+button,
+input,
+select,
+textarea {
+    color: #222;
+}
+
+* {
+    box-sizing:border-box;
+    -moz-box-sizing:border-box;
+}
+
+html {
+    font-size: 1em;
+    line-height: 1.4;
+    height: 100%;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+p {
+    margin:0 0 10px 0;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: 'Playfair Display', serif;
+}
+
+.main h1, .main h2, .main h3, .main h4, .main h5, .main h6{
+    color: #8f172b;
+}
+
+audio,
+canvas,
+img,
+video {
+    vertical-align: middle;
+}
+
+img {
+    max-width: 100%;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browsehappy {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ===== Initializr Styles ==================================================
+   Author: Jonathan Verrecchia - verekia.com/initializr/responsive-template
+   ========================================================================== */
+
+body {
+    height: 100%;
+    position: relative;
+    font: 16px/26px Helvetica, Helvetica Neue, Arial;
+    background: #AC4848;
+    transition:height 0.5s linear;
+    overflow-x: hidden;
+}
+
+html:not(.touch) body {
+    background: #fcd199; /* Old browsers */
+    background: -moz-linear-gradient(top,  #fcd199 0%, #8f172b 100%); /* FF3.6+ */
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#fcd199), color-stop(100%,#8f172b)); /* Chrome,Safari4+ */
+    background: -webkit-linear-gradient(top,  #fcd199 0%,#8f172b 100%); /* Chrome10+,Safari5.1+ */
+    background: -o-linear-gradient(top,  #fcd199 0%,#8f172b 100%); /* Opera 11.10+ */
+    background: -ms-linear-gradient(top,  #fcd199 0%,#8f172b 100%); /* IE10+ */
+    background: linear-gradient(to bottom,  #fcd199 0%,#8f172b 100%); /* W3C */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#fcd199', endColorstr='#8f172b',GradientType=0 ); /* IE6-9 */
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.wrapper {
+    width: 100%;
+}
+
+.amp {
+    display: inline-block;
+    margin:0 4px;
+}
+
+.header-container {
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-left: -160px;
+    margin-top: -68px;
+    width: 320px;
+    z-index: 99;
+
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+.header-content {
+    cursor: pointer;
+}
+
+.title {
+    font-size: 3em;
+    margin:0;
+    font-family: 'Playfair Display', serif;
+}
+
+.subtitle {
+    font-family: "Avenir", Helvetica, Arial, sans-serif;
+    letter-spacing: 7px;
+    text-transform: uppercase;
+    font-size: 0.8em;
+    text-indent: 7px;
+    margin-top:15px;
+    margin-bottom:0;
+}
+
+.title,
+.subtitle {
+    color: #fff;
+    text-shadow:0 1px 2px #333;
+}
+
+.tabs {
+    list-style: none;
+    margin: 0 0 10px;
+    padding: 0;
+}
+
+.tabs:before,
+.tabs:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.tabs .tab {
+    color: #8f172b;
+    float: left;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    display: inline-block;
+    padding: 10px;
+    border: 1px solid #8f172b;
+    line-height: 1em;
+    position: relative;
+}
+
+.tabs .tab.active:after {
+    content: "";
+    position: absolute;
+    left:50%;
+    margin-left: -8px;
+    top:100%;
+    width: 0; 
+    height: 0; 
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    border-top: 8px solid #8f172b;
+}
+
+.tabs .tab.active {
+    background-color: #8f172b;
+    color:#fff;
+}
+
+/* ==============
+    MOBILE: Menu
+   ============== */
+
+nav {
+    font-family: Helvetica, Arial, sans-serif;
+    font-weight: normal;
+    width: 100%;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    text-align: center;
+}
+
+nav li {
+    display: inline-block;
+    margin: 5px;
+}
+
+nav a,
+nav a:visited,
+html:not(.touch) nav a:active {
+    display: block;
+    margin-bottom: 0;
+    text-align: center;
+    text-decoration: none;
+
+    color: white;
+    background: transparent;
+    font-size: 80px;
+
+    -webkit-transition: all 0.4s ease;
+    -o-transition: all 0.4s ease;
+    transition: all 0.4s ease;
+}
+
+nav a.active i,
+html:not(.touch) nav a:hover i{
+    color: #8f172b;
+    border-color: #8f172b;
+}
+
+/* ==============
+    MOBILE: Main
+   ============== */
+
+.frontpage-don,
+.frontpage-meg {
+    display: none;
+}
+
+body.home .frontpage-don,
+body.home .frontpage-meg {
+    opacity: 0.5;
+    display: block;
+    position: absolute;
+}
+
+body.home .frontpage-don {
+    bottom: -100px;
+    right: -320px;
+    height: 540px;
+}
+
+body.home .frontpage-meg {
+    bottom: -90px;
+    left: -238px;
+    height: 510px;
+}
+
+.main{
+    padding: 30px 60px;
+    background:#fff;
+    min-height: 100%;
+    width: 60%;
+    max-width: 1100px;
+    float:right;
+    position: relative;
+
+    box-shadow: 0 0 10px 0 #333;
+
+    /*-webkit-transform:translateX(100%);
+    -o-transform:translateX(100%);
+    transform:translateX(100%);*/
+
+    -webkit-transition:all 0.4s ease;
+    -moz-transition:all 0.4s ease;
+    -o-transition:all 0.4s ease;
+    transition:all 0.4s ease;
+}
+
+.main.ng-enter, .main.ng-leave {
+  position: absolute;
+  right: 0;
+}
+
+.main.ng-enter {
+  opacity: 0;
+  -webkit-transform:translateX(100%);
+    -o-transform:translateX(100%);
+    transform:translateX(100%);
+}
+
+.main.ng-enter-active {
+  opacity: 1;
+  -webkit-transform:translateX(0);
+    -o-transform:translateX(0);
+    transform:translateX(0);
+}
+
+.main.ng-leave {
+  opacity: 1; 
+  -webkit-transform:translateX(0);
+    -o-transform:translateX(0);
+    transform:translateX(0);
+}
+
+.main.ng-leave-active {
+  opacity: 0;
+  -webkit-transform:translateX(100%);
+    -o-transform:translateX(100%);
+    transform:translateX(100%);
+}
+
+.main article h1 {
+    font-size: 2em;
+}
+
+.main aside {
+    color: white;
+    padding: 0px 5% 10px;
+}
+
+.footer-container footer {
+    color: white;
+    padding: 20px 0;
+}
+
+/* ===============
+    ALL: IE Fixes
+   =============== */
+
+.ie7 .title {
+    padding-top: 20px;
+}
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+[ng-click] {
+    cursor: pointer;
+}
+
+body.home .global-messages {
+    display: block;
+}
+
+.global-messages {
+    display: none;
+    position: fixed;
+    letter-spacing: 1px;
+    padding:5px 10px;
+    bottom:0;
+    left:0;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+    text-align:center;
+}
+
+.global-messages span {
+    margin:0;
+    color:#fff;
+    font-size: 11px;
+}
+
+.global-messages a {
+    color:#fff;
+}
+
+.global-messages .close-btn {
+    position: absolute;
+    right: 10px;
+    top:50%;
+    line-height: 0;
+}
+
+body:not(.home) .header-container {
+    top: 0;
+    left: 0;
+    margin:0;
+    width: 40%;
+    padding-top:100px;
+}
+
+body.home .main{
+    -webkit-transform:translateX(100%);
+    -o-transform:translateX(100%);
+    transform:translateX(100%);
+}
+
+count-down {
+    display: block;
+}
+
+.table {
+    display: table;
+}
+
+.table.table-fixed {
+    table-layout: fixed;
+}
+
+.tr {
+    display: table-row;
+}
+
+.td {
+    display: table-cell;
+    padding: 5px;
+}
+
+.text-light {
+    color: #fff;
+}
+
+.text-shadow {
+    text-shadow:0 1px 2px #333;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.text-left {
+    text-align: left.;
+}
+
+.element-inline {
+    display: inline-block;
+}
+
+.element-block {
+    display: block;
+}
+
+.element-center {
+    margin:0 auto;
+}
+
+.full-width {
+    width: 100%;
+}
+
+.full-height {
+    height: 100%;
+}
+
+.va-top {
+    vertical-align: top;
+}
+
+.va-middle {
+    vertical-align: middle;
+}
+
+.float-container:before,
+.float-container:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.float-left {
+    float: left;
+}
+
+.float-right {
+    float: right;
+}
+
+.mrg-r5 {
+    margin-right: 5px;
+}
+.mrg-r10 {
+    margin-right: 10px;
+}
+.mrg-r20 {
+    margin-right: 20px;
+}
+.mrg-r30 {
+    margin-right: 30px;
+}
+.mrg-r40 {
+    margin-right: 40px;
+}
+
+.mrg-l5 {
+    margin-left: 5px;
+}
+.mrg-l10 {
+    margin-left: 10px;
+}
+.mrg-l20 {
+    margin-left: 20px;
+}
+.mrg-l30 {
+    margin-left: 30px;
+}
+.mrg-l40 {
+    margin-left: 40px;
+}
+
+.mrg-t5 {
+    margin-top: 5px;
+}
+.mrg-t10 {
+    margin-top: 10px;
+}
+.mrg-t20 {
+    margin-top: 20px;
+}
+.mrg-t30 {
+    margin-top: 30px;
+}
+.mrg-t40 {
+    margin-top: 40px;
+}
+
+.mrg-b5 {
+    margin-bottom: 5px;
+}
+.mrg-b10 {
+    margin-bottom: 10px;
+}
+.mrg-b20 {
+    margin-bottom: 20px;
+}
+.mrg-b30 {
+    margin-bottom: 30px;
+}
+.mrg-b40 {
+    margin-bottom: 40px;
+}
+
+.wedding-gallery figure {
+    float: left;
+    margin: 5px;
+}
+
+.wedding-gallery figure img {
+    max-height: 100px;
+}
+
+.wedding-gallery figure a {
+    display: block;
+    overflow: hidden;
+}
+
+/*.about .wedding-gallery figure {
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    border-radius: 50%;
+    overflow: hidden;
+}*/
+
+instagram-twitter-images:before,
+instagram-twitter-images:after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+/*body.ng-enter,
+body.ng-leave,
+body.ng-enter-active,
+body.ng-leave-active,
+body.registry .main,
+body.engageParty .main {
+    height: 100%;
+}*/
+
+.main .registration-item {
+    border: 1px solid #000;
+    width: 200px;
+    height: 200px;
+    padding: 0 10px;
+    margin: 0 10px;
+}
+
+.main .registration-item img {
+    width: 100%;
+}
+
+music-request .main-music-container {
+    background: #fff;
+    display: block;
+    position: fixed;
+    bottom: 0;
+    left: 10px;
+    padding: 20px;
+    z-index: 99;
+    max-width: 320px;
+    border: 1px solid #ccc;
+
+    transform: translate(0, 100%);
+    transition: transform 0.2s ease;
+}
+
+music-request .main-music-container.active {
+    transform: translate(0, 0%);
+}
+
+music-request .tab-flag {
+    position: absolute;
+    bottom: 100%;
+    width: 40px;
+    height: 40px;
+    background: #fff url(/_/img/music-note.png) center center no-repeat;
+    left: -1px;
+    border-radius: 3px 3px 0 0;
+    background-size: 36%;
+    border: 1px solid #ccc;
+    border-bottom: 0;
+}
+
+music-request h3 {
+    margin: 0 0 10px;
+    font-size: 25px;
+    font-family: Helvetica, Arial, sans-seif;
+}
+
+music-request h1 {
+    font-size: 25px;
+    font-family: Helvetica, Arial, sans-serif;
+}
+
+music-request p {
+    font-size: 16px;
+}
+
+music-request .form-input {
+    width: 100%;
+    padding: 10px;
+    margin: 0;
+    display: block;
+    border: 1px solid #ccc;
+}
+
+music-request .form-submit {
+    width: 100%;
+    padding: 12px;
+    background-color: #196471;
+    color: #fff;
+    border: 1px solid #ccc;
+    text-transform: uppercase;
+    font-size: 18px;
+}
+
+music-request .form-input-error {
+    font-size: 14px;
+    margin-bottom: 20px;
+    color: red;
+ }
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media screen and (max-width: 700px){
+    body {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    body:not(.home) .header-container {
+        left: 0;
+        margin-left: 0
+    }
+    
+    body:not(.home) .header-container,
+    .main {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    body:not(.home) .header-container{
+        padding-top: 40px;
+        background: #AC4848;
+        box-shadow: 0 1px 10px 0 #333;
+    }
+
+    .main {
+        height: auto;
+        padding-top: 240px;
+        box-shadow: none;
+    }
+
+    body.home .main{
+        width: 0;
+        padding: 0;
+        -webkit-transform:translateX(100%);
+        -o-transform:translateX(100%);
+        transform:translateX(100%);
+    }
+    
+    
+    .main.ng-enter, .main.ng-leave {
+      position: absolute;
+      right: 0;
+    }
+    
+    .main.ng-enter {
+      opacity: 0;
+      -webkit-transform:translateX(0);
+        -o-transform:translateX(0);
+        transform:translateX(0);
+    }
+    
+    .main.ng-enter-active {
+      opacity: 1;
+      -webkit-transform:translateX(0);
+        -o-transform:translateX(0);
+        transform:translateX(0);
+    }
+    
+    .main.ng-leave {
+      opacity: 1; 
+      -webkit-transform:translateX(0);
+        -o-transform:translateX(0);
+        transform:translateX(0);
+    }
+    
+    .main.ng-leave-active {
+      opacity: 0;
+      -webkit-transform:translateX(0);
+        -o-transform:translateX(0);
+        transform:translateX(0);
+    }
+
+    html.touch body:not(.home) count-down {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 450px){
+        .header-container {
+            max-width: 414px;
+        }
+}

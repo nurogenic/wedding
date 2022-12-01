@@ -1,0 +1,17 @@
+<div class="main-music-container" ng-class="{'active': canShow()}">
+	<div class="tab-flag" ng-click="toggleShow()"></div>
+	<h1 class="success-message" ng-if="successMessage">{{successMessage}}</h1>
+	<div ng-if="!successMessage">
+		<h3>Request a Song!</h3>
+		<p>Have a song you'd like to hear at the wedding? Request it!</p>
+		<form novalidate name="musicRequest" class="css-form">
+		    <input type="text" ng-model="user.name" name="userName" placeholder="Name" class="form-input" required />
+		    <div class="form-input-error" ng-if="musicRequest.$submitted && !musicRequest.userName.$valid">Who are you?</div>
+		    <input type="email" ng-model="user.email" name="userEmail" placeholder="E-mail" class="form-input" required />
+		    <div class="form-input-error" ng-if="musicRequest.$submitted && !musicRequest.userEmail.$valid">Please add a valid email.</div>
+		    <input type="text" ng-model="user.song" name="userSong" placeholder="Song Name" class="form-input" required />
+		    <div class="form-input-error" ng-if="musicRequest.$submitted && !musicRequest.userSong.$valid">What song do you want to hear?</div>
+		    <input type="submit" ng-click="submit(musicRequest)" value="Submit" class="form-submit"/>
+	  </form>
+  </div>
+</div>
